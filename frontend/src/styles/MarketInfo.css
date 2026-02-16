@@ -1,0 +1,181 @@
+.market-info h3 {
+  font-size: 14px;
+  color: #8b949e;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.ticker-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  background-color: #0d1117;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+}
+
+.stat-label {
+  display: block;
+  font-size: 11px;
+  color: #8b949e;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #c9d1d9;
+}
+
+.stat-value.positive {
+  color: #3fb950;
+}
+
+.stat-value.negative {
+  color: #f85149;
+}
+
+.market-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.order-book, .recent-trades {
+  background-color: #0d1117;
+  border-radius: 6px;
+  padding: 12px;
+  border: 1px solid #30363d;
+}
+
+.order-book h3, .recent-trades h3 {
+  margin-bottom: 15px;
+}
+
+.order-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 4px 8px;
+  font-size: 12px;
+  position: relative;
+  margin-bottom: 2px;
+}
+
+.order-row .price {
+  font-weight: 600;
+}
+
+.order-row .quantity {
+  text-align: right;
+  color: #8b949e;
+}
+
+.order-row.ask {
+  color: #f85149;
+}
+
+.order-row.bid {
+  color: #3fb950;
+}
+
+.depth-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.order-row.ask .depth-bar {
+  background-color: #f85149;
+}
+
+.order-row.bid .depth-bar {
+  background-color: #3fb950;
+}
+
+.order-row .price, .order-row .quantity {
+  position: relative;
+  z-index: 1;
+}
+
+.spread {
+  text-align: center;
+  padding: 8px;
+  margin: 8px 0;
+  background-color: #161b22;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #8b949e;
+  font-weight: 600;
+}
+
+.asks {
+  margin-bottom: 5px;
+}
+
+.bids {
+  margin-top: 5px;
+}
+
+.trades-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.trade-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+}
+
+.trade-row.buy {
+  background-color: rgba(63, 185, 80, 0.1);
+}
+
+.trade-row.sell {
+  background-color: rgba(248, 81, 73, 0.1);
+}
+
+.trade-row.buy .trade-price {
+  color: #3fb950;
+  font-weight: 600;
+}
+
+.trade-row.sell .trade-price {
+  color: #f85149;
+  font-weight: 600;
+}
+
+.trade-quantity {
+  text-align: center;
+  color: #c9d1d9;
+}
+
+.trade-time {
+  text-align: right;
+  color: #8b949e;
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .market-panels {
+    grid-template-columns: 1fr;
+  }
+  .ticker-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
